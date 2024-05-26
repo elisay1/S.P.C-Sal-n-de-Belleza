@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 :root {
-  --font-default: 'Roboto', sans-serif;
-  --font-primary: 'Roboto', sans-serif;
-  --font-secondary: 'Roboto', sans-serif;
-  --font-heading: 'Roboto', sans-serif;
+  --font-default: "Roboto", sans-serif;
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Roboto", sans-serif;
+  --font-heading: "Roboto", sans-serif;
 }
 
 :root {
@@ -1081,9 +1082,6 @@ section {
   text-align: left;
 }
 
-.service-package-content .service-package-list {
-  /*padding: 30px 0;*/
-}
 
 .service-package-content .service-package-list .active {
   background: #03A9F4;
@@ -1923,36 +1921,7 @@ section {
 # Hero Section
 --------------------------------------------------------------*/
 
-.rocket-position{
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  z-index: 9;
-}
-.rocket {
-  width: 100px;
-  height: 100px;
-  position: relative;
-  animation-name: move;
-  animation-duration: 3s;
-  animation-delay: 1s;
-  opacity: 0.5;
-  animation-fill-mode: forwards;
-}
 
-@keyframes move {
-  0% {
-    opacity: 0.1;
-    transform: rotate(120deg) translateY(0);
-  }
-  10% {
-    opacity: 0.2;
-    transform: rotate(0deg) translateY(0);
-  }
-  100% {
-    transform: rotate(30deg) translateY(-600px);
-  }
-}
 
 .hero {
   width: 100%;
@@ -1991,7 +1960,7 @@ section {
     right: 0;
     bottom: 0;
     min-width: 100%;
-    min-height: 100%;
+    /* min-height: 100%; */
     height: 100%;
     animation: crescendo 7.5s alternate infinite ease-in;
 }
@@ -2153,36 +2122,8 @@ section {
   .hero::after {
     display: none;
   }
-  .rocket-position{
-    position: fixed;
-    bottom: 270px;
-    left: 0;
-    right: 0;
-    z-index: 9;
-  }
-  .rocket {
-    width: 150px;
-    height: 150px;
-    position: relative;
-    animation-name: move;
-    animation-duration: 3s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-  }
+  
 
-  @keyframes move {
-    0% {
-      opacity: 0;
-      transform: rotate(0deg) translateY(100px);
-    }
-    10% {
-      opacity: 0.2;
-      transform: rotate(0deg) translateY(100px);
-    }
-    100% {
-      transform: rotate(30deg) translateY(-50px);
-    }
-  }
 }
 
 @media screen and (max-width: 1279px) {
@@ -2328,239 +2269,6 @@ section {
   }
 }
 
-/* -------------------------------------------------------------- 
- * Counter Section Style
- -------------------------------------------------------------- */
-.counter-area{
-    background: url('../images/hero-bg.jpg');
-    background-size: cover;
-    border-radius: 0px;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    color: #fff;
-    position: relative;
-}
-.counter-area::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.9;
-    z-index: 0;
-    background: #d91b6c;
-}
-.counter-area ul li{
-  color: #ffffff !important;
-}
-.counter-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  margin: 30px 50px;
-}
-.counter-container i{
-  margin-bottom: 0px;
-}
-.counter-container ul{text-align: left;margin-top: 30px;}
-.counter-container ul li{
-  line-height: 33px;
-}
-.counter-container .icon{
-  width: 100%;
-}
-.counter-container .icon img{
-  width: 100%;
-  
-}
-.counter {
-  font-size: 122px;
-  margin-top: 10px;
-}
-.counter-area span {
-  margin-top: 0px;
-}
-
-@media (max-width: 580px) {
-  body {
-    flex-direction: column;
-  }
-}
-
-
-
-/* -------------------------------------------------------------- **
-  Contact
- -------------------------------------------------------------- **/
-.contact-section .contact-form-3 form .form-control {
-  font-size: 15px;
-  width: 100%;
-  padding: 10px 20px;
-  height: 52px;
-  color: var(--color-primary);
-  font-weight: 600;
-  border-radius: 0;
-  text-transform: capitalize;
-  transition: all 0.4s;
-  background: #ffffff;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 0px 10px 0px rgb(228 228 228 / 50%);
-}
-
-.contact-section .contact-form-3 form input:focus,
-.contact-section .contact-form-3 form textarea:focus {
-  outline: none;
-  border: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.contact-information-box-3 {
-  background: var(--color-primary);
-  padding: 25px 20px;
-  border-radius: 0;
-  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05), 0 5px 15px rgba(0, 0, 0, 0.03);
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05), 0 5px 15px rgba(0, 0, 0, 0.03);
-  margin-bottom: 50px;
-}
-
-.contact-information-box-3 .single-contact-info-box {
-  position: relative;
-  z-index: 1;
-  padding: 10px 10px;
-  display: block;
-  border-radius: 3px;
-  text-align: left;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
-
-.contact-information-box-3 .contact-info {
-  position: relative;
-  z-index: 1;
-}
-
-.contact-information-box-3 .contact-info h6 {
-  font-size: 18px;
-  color: #ffffff;
-  margin-bottom: 7px;
-  text-transform: capitalize;
-}
-
-.contact-information-box-3 .contact-info p {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  margin: 0;
-}
-
-.contact-information-box-3 .single-contact-info-box .contact-info-bg-icon {
-  color: #f44336;
-  opacity: .2;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -25px;
-  margin: 0 auto;
-  z-index: -1;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.contact-information-box-3 .single-contact-info-box .contact-info-bg-icon i {
-  font-size: 100px;
-}
-
-.contact-section .contact-form .form-group {
-  margin-bottom: 30px;
-}
-
-.contact-section .contact-form form textarea.form-control {
-  height: auto;
-  padding-top: 15px;
-  line-height: initial;
-}
-
-.contact-section .form-message {
-  margin: 0;
-}
-
-button.btn-get-started {
-  font-family: var(--font-primary);
-  font-weight: 500;
-  font-size: 15px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 14px 20px;
-  border-radius: 20px;
-  transition: 0.3s;
-  color: #ffffff;
-  background: var(--color-primary);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
-  border: 2px solid var(--color-primary);
-}
-
-button.btn-get-started:hover {
-  border-color: #2a2a2a;
-  position: relative;
-  background: #2a2a2a;
-  color: #fff;
-  border: 2px solid #2a2a2a;
-}
-
-.contact-section .form-message.success {
-  background: #03b103;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 3px;
-  margin-bottom: 30px;
-}
-
-.contact-section .form-message.error {
-  background: #ff4d15;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 3px;
-  margin-bottom: 30px;
-}
-
-.contact-area .form-message.success {
-  background: #03b103;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 3px;
-  display: block;
-  margin-bottom: 15px;
-}
-
-.contact-area .form-message.error {
-  background: #ff4d15;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 3px;
-  display: block;
-  margin-bottom: 15px;
-}
-
-.with-errors {
-  color: #dc3545;
-}
-
-.messages {
-  margin-top: 30px;
-}
-
-.alert-success {
-  margin-left: 15px;
-}
-
-.hidden {
-  display: none;
-}
 
 /*--------------------------------------------------------------
 # Footer
